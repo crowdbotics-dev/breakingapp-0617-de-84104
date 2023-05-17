@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import * as React from "react";
 import { Text, View, Image, StyleSheet } from "react-native";
 
 const Settings = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
 
       <View style={styles.mainSection}>
@@ -40,7 +43,17 @@ const Settings = () => {
           <Text style={styles.inviteFriendsText}>About Us</Text>
         </View>
       </View>
-    </View>;
+    <Pressable onPress={() => {
+      navigation.navigate("Untitled21");
+    }}><Text style={styles.zUvJgSeW}>Change password</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("supportSendFeedback");
+    }}><Text style={styles.ujoxCAGM}>Support/ Send Feedback</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("Untitled23");
+    }}><Text style={styles.uekMrSXm}>Log out</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("privacyPolicy");
+    }}><Text style={styles.CDkUnOeN}>Privacy Policy</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("termsAndConditions");
+    }}><Text style={styles.tMmaZops}>Terms and conditions</Text></Pressable></View>;
 };
 
 const styles = StyleSheet.create({
@@ -161,6 +174,41 @@ const styles = StyleSheet.create({
     width: 20,
     backgroundColor: "#000000",
     borderRadius: 10
+  },
+  zUvJgSeW: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  ujoxCAGM: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  uekMrSXm: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  CDkUnOeN: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  tMmaZops: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
   }
 });
 export default Settings;

@@ -1,3 +1,5 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from "react";
 import { ScrollView, Text, View, StyleSheet, TouchableHighlight, Image, TextInput } from "react-native";
 
@@ -141,10 +143,13 @@ const btnStyles = StyleSheet.create({
 });
 
 const ProfileImage = props => {
+  const navigation = useNavigation();
   return <TouchableHighlight onPress={props.onPress} underlayColor="#DDDDDD">
-      <View style={profileStyles.container}>
+      <Pressable onPress={() => {
+      navigation.navigate("uploadMedia");
+    }}><View style={profileStyles.container}>
         <Image style={profileStyles.image} resizeMode="contain" source={require("./assets/edit.png")} />
-      </View>
+      </View></Pressable>
     </TouchableHighlight>;
 };
 

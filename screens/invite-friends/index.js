@@ -7,8 +7,8 @@ const InviteFriendsScreen = params => {
       <View style={styles.container}>
         <View style={styles.searchBar}>
           <Text style={styles.searchText}>Search</Text>
-          <View style={styles.nPGdHeBN}>
-            <View style={styles.WKHLsary}>
+          <View style={styles.sDnuRYkm}>
+            <View style={styles.UjXRhekJ}>
               <TextInput style={textStyles.input} placeholder="Enter" value={value} onChangeText={text => setValue(text)} placeholderTextColor="#ddd" />
             </View>
             <Image source={require("./assets/search.png")} />
@@ -62,18 +62,18 @@ const styles = StyleSheet.create({
     marginLeft: 30,
     color: "#8F8D86"
   },
-  nPGdHeBN: {
+  sDnuRYkm: {
     borderWidth: 1,
     borderRadius: 10,
     borderColor: "#C4C4C4",
     flexDirection: "row",
     alignItems: "center"
   },
-  WKHLsary: {
+  UjXRhekJ: {
     width: "90%"
   },
-  lQGzzfOt: {
-    backgroundColor: "props.bgcolor"
+  eSXmoGQf: {
+    backgroundColor: props.bgcolor
   }
 });
 export default InviteFriendsScreen;
@@ -81,7 +81,7 @@ export default InviteFriendsScreen;
 const Follower = props => {
   return <View style={FollowerStyles.follower}>
       <View style={FollowerStyles.main}>
-        <View style={[FollowerStyles.image, styles.lQGzzfOt]}>
+        <View style={[FollowerStyles.image, styles.eSXmoGQf]}>
           <Image source={require("./assets/edit.png")} />
         </View>
         <Text>{props.name}</Text>

@@ -1,3 +1,5 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import * as React from "react";
 import { Text, View, StyleSheet, TextInput, TouchableHighlight } from "react-native";
 
@@ -6,6 +8,7 @@ const pressed = () => {
 };
 
 const ForgotPassword = () => {
+  const navigation = useNavigation();
   return <View style={styles.container}>
       <View style={styles.topHead}>
         <Text style={styles.mainHeading}>Forgot {"\n"} password</Text>
@@ -32,7 +35,9 @@ const ForgotPassword = () => {
         </Button>
       </View>
       <View style={styles.back}>
-        <Text style={styles.backText}>Back</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("login2");
+      }}><Text style={styles.backText}>Back</Text></Pressable>
       </View>
     </View>;
 };
